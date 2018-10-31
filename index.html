@@ -288,12 +288,12 @@
             "Message from " + email + " on the Portfolio Website",
             message,
             {token: "f1612254-579e-4e1c-bf03-9fedede23c27",
-                callback: function done(message) { document.getElementById('mail-alert').style.display = 'block'; }}
+                callback: function done(message) { document.getElementById('mail-alert').style.display = 'block'; setTimeout(function () {
+                    document.getElementById('mail-alert').style.display = 'none';
+                }, 5000); }}
             );
 
-        setTimeout(function () {
-            document.getElementById('mail-alert').style.display = 'none';
-        }, 5000);
+
 
     };
 
